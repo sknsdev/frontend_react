@@ -61,7 +61,7 @@ const Testimonial = () => {
 							onClick={() =>
 								handleClick(
 									currentIndex === testimonials.length - 1
-										? 1
+										? 0
 										: currentIndex + 1
 								)
 							}>
@@ -71,7 +71,7 @@ const Testimonial = () => {
 				</>
 			)}
 
-			<div className='app__testimonial-brands app__flex'>
+			{/* <div className='app__testimonial-brands app__flex'>
 				{console.log("brad", brands)}
 				{brands.map((brand) => (
 					<motion.div
@@ -81,7 +81,7 @@ const Testimonial = () => {
 						<img src={urlFor(brand.imgUrl)} alt={brand.name} />
 					</motion.div>
 				))}
-			</div>
+			</div> */}
 		</>
 	);
 };

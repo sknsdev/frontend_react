@@ -10,15 +10,22 @@ const Navbar = () => {
 	return (
 		<nav>
 			<div className='app__navbar'>
-				<img className='app__navbar-logo' src={images.logo} alt='logo' />
+				<img
+					className='app__navbar-logo'
+					src={images.logo}
+					alt='logo'
+					style={{ maxHeight: 40, opacity: 0.6 }}
+				/>
 
 				<ul className='app__navbar-links'>
-					{["home", "about", "work", "skills", "testimonial", "contact"].map((menu_item) => (
-						<li className='app__flex p-text' key={`link-${menu_item}`}>
-							<div />
-							<a href={`#${menu_item}`}>{menu_item}</a>
-						</li>
-					))}
+					{["home", "about", "work", "skills", "testimonial", "contact"].map(
+						(menu_item) => (
+							<li className='app__flex p-text' key={`link-${menu_item}`}>
+								<div />
+								<a href={`#${menu_item}`}>{menu_item}</a>
+							</li>
+						)
+					)}
 				</ul>
 				<div className='app__navbar-menu'>
 					<HiMenuAlt4 onClick={() => setToggle(true)} />
